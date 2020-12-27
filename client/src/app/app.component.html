@@ -1,0 +1,56 @@
+<div class="map" id="mapId">
+  <mat-card class="MatForm">
+    <mat-card-title style="text-align: center"
+      >Welcome To MapApp</mat-card-title
+    >
+    <ng-container *ngIf="formSubmitting; else elseTemplate">
+      <img
+        mat-card-image
+        src="https://media.giphy.com/media/Icopi3DCD0GRoIatKV/giphy.gif"
+        alt="Compass gif"
+      />
+    </ng-container>
+    <ng-template #elseTemplate>
+      <form
+        class="example-form"
+        [formGroup]="myForm"
+        (ngSubmit)="onSubmit($event)"
+      >
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your Name"
+            autocomplete="off"
+            formControlName="Name"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Message</mat-label>
+          <input
+            matInput
+            #message
+            maxlength="256"
+            placeholder="Ex. I need help with..."
+            autocomplete="off"
+            formControlName="Message"
+          />
+          <mat-hint align="start"
+            ><strong>Don't disclose personal info</strong>
+          </mat-hint>
+          <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+        </mat-form-field>
+        <br />
+        <br />
+        <button
+          mat-raised-button
+          color="accent"
+          type="submit"
+          [disabled]="!myForm.valid"
+        >
+          Submit
+        </button>
+      </form>
+    </ng-template>
+  </mat-card>
+</div>

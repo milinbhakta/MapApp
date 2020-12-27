@@ -1,0 +1,23 @@
+.map {
+  height: 100vh;
+}
+
+.MatForm {
+  z-index: 1000;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.example-form {
+  width: auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
