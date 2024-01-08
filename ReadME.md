@@ -20,6 +20,7 @@ After installing all the dependencies, you can start the application by running 
 
 ```bash
 npm start
+```
 
 ## Usage
 
