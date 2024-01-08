@@ -1,0 +1,22 @@
+# Ignore the node_modules directory
+node_modules/
+client/node_modules
+server/node_modules
+
+# Ignore Logs
+logs
+*.log
+
+# Ignore the build directory
+/dist
+
+# The file containing environment variables 
+.env
+server/.env
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+/client/.vscode
+*.sw*
+.DS_Store
